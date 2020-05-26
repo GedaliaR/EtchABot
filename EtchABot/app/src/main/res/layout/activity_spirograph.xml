@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpirographActivity">
+
+    <Button
+        android:id="@+id/stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:onClick="stopSpirograph"
+        android:text="@string/stop_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.739"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.266" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startSpirograph"
+        android:text="@string/start_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.263" />
+
+    <EditText
+        android:id="@+id/k_param"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/k_param_default"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/stop_button"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/stop_button"
+        app:layout_constraintTop_toBottomOf="@+id/stop_button"
+        app:layout_constraintVertical_bias="0.41"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/l_param"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/l_param_default"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/start_button"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/start_button"
+        app:layout_constraintTop_toBottomOf="@+id/start_button"
+        app:layout_constraintVertical_bias="0.41"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/param_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/param_text"
+        android:textAlignment="center"
+        android:textSize="@dimen/banner_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.468" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_home"
+        tools:ignore="VectorDrawableCompat" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

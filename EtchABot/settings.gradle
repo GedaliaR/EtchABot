@@ -1,0 +1,2 @@
+include ':app', ':ardutooth-release'
+rootProject.name='EtchABot'

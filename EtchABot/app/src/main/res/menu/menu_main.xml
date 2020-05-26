@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.etchabot.MainActivity">
+
+    <item
+        android:id="@+id/action_microstep"
+        android:orderInCategory="100"
+        android:title="@string/microstep"
+        android:icon="@drawable/ic_microstep"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_spirograph"
+        android:orderInCategory="200"
+        android:title="@string/spirograph"
+        android:icon="@drawable/ic_spirograph"
+        app:showAsAction="ifRoom"
+        />
+
+</menu>
