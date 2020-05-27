@@ -18,4 +18,11 @@
         app:showAsAction="ifRoom"
         />
 
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/about"
+        android:icon="@android:drawable/ic_dialog_info"
+        app:showAsAction="never"
+        />
+
 </menu>

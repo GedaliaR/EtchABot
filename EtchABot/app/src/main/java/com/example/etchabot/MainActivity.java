@@ -18,6 +18,8 @@ import com.google.android.material.snackbar.Snackbar;
 import io.github.controlwear.virtual.joystick.android.JoystickView;
 import io.github.giuseppebrb.ardutooth.Ardutooth;
 
+import static com.example.etchabot.Utils.showInfoDialog;
+
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private static final int SPEED_COEFFICIENT = 5;
@@ -126,18 +128,28 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         switch (id){
-            case (R.id.action_microstep):
+            case (R.id.action_microstep): {
                 //stuf
                 break;
-            case (R.id.action_spirograph):
-                Intent intent = new Intent (getApplicationContext (), SpirographActivity.class);
-                startActivityForResult (intent, 0);
+            }
+            case (R.id.action_spirograph): {
+                Intent intent = new Intent(getApplicationContext(), SpirographActivity.class);
+                startActivityForResult(intent, 0);
                 return true;
+            }
+            case (R.id.action_about): {
+                showAbout();
+                return true;
+            }
             default:
                 break;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void showAbout() {
+        showInfoDialog(this, R.string.app_name, R.string.about_message);
     }
 
 }

@@ -11,4 +11,6 @@
     <string name="spirograph">Spirograph</string>
     <string name="microstep">MicroStep</string>
     <string name="spirograph_lisajous_switch_label_text">Spirograph/Lisajous</string>
+    <string name="about">About</string>
+    <string name="about_message">An App to control an Etch-A-Sketch via Bluetooth. For more information and full project details check out my GitHub: https://github.com/GedaliaR/EtchABot</string>
 </resources>
