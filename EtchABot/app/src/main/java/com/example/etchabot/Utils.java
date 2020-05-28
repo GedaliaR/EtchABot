@@ -9,7 +9,7 @@ import androidx.core.content.ContextCompat;
 
 public class Utils
 {
-   
+
     /**
      * Shows an Android (nicer) equivalent to JOptionPane
      *

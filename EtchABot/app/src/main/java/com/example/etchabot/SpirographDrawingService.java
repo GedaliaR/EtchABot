@@ -32,7 +32,7 @@ public class SpirographDrawingService extends Service {
     @SuppressLint("StaticFieldLeak")
     private static Ardutooth mArdutooth;
     private Thread drawingThread;
-    private boolean stopped;
+    private static boolean stopped;
 
 
     public void setAngle(int angle){
@@ -64,8 +64,9 @@ public class SpirographDrawingService extends Service {
         angle = angle + 2;
     }
 
-
-
+    public boolean isStopped() {
+        return stopped;
+    }
 
     @Override
     public void onCreate(){
@@ -127,6 +128,8 @@ public class SpirographDrawingService extends Service {
     public void onDestroy(){
         stopped = true;
     }
+
+
 
     @Nullable
     @Override

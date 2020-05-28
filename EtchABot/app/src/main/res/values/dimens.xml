@@ -2,4 +2,5 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="default_text_size">24sp</dimen>
     <dimen name="banner_text_size">20sp</dimen>
+    <dimen name="arrowButton_minWidth">25dp</dimen>
 </resources>

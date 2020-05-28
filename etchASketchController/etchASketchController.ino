@@ -105,8 +105,8 @@ void drawLine(int targetX, int targetY) {
   }
 
 //  BT.println("moving to target location");
-  horzMotor.moveTo(targetX);
-  vertMotor.moveTo(targetY);
+  horzMotor.moveTo(targetX * -1);
+  vertMotor.moveTo(targetY * -1);
 
   while (horzMotor.distanceToGo() != 0 || vertMotor.distanceToGo() != 0) {
     horzMotor.run();
@@ -130,8 +130,8 @@ void move(int xRelTarget, int yRelTarget) {
   moveXBacklash(dx, sx);
   moveYBacklash(dy, sy);
 
-  horzMotor.move(xRelTarget);
-  vertMotor.move(yRelTarget);
+  horzMotor.move(xRelTarget * -1); 
+  vertMotor.move(yRelTarget * -1);
 
   while (horzMotor.distanceToGo() != 0 || vertMotor.distanceToGo() != 0) {
     horzMotor.run();
@@ -250,8 +250,8 @@ void loop() {
     // Parse the string for instructions
     if (stringComplete) {
       //delay(50);
-      //Serial.print("Got String: ");
-      //Serial.println(inputString.c_str());
+      BT.print("Got String: ");
+      BT.println(inputString.c_str());
       extractAndExecuteCmd(inputString);
       inputString = "";
       stringComplete = false;

@@ -129,7 +129,8 @@ public class MainActivity extends AppCompatActivity {
 
         switch (id){
             case (R.id.action_microstep): {
-                //stuf
+                Intent intent = new Intent(getApplicationContext(), MicrostepActivity.class);
+                startActivity(intent);
                 break;
             }
             case (R.id.action_spirograph): {

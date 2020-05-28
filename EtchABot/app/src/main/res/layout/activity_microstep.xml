@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MicrostepActivity">
+
+    <Button
+        android:id="@+id/microstep_up"
+        style="@style/arrowButtonStyle.up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/microstep_right"
+        app:layout_constraintStart_toEndOf="@+id/microstep_left"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        android:onClick="microstepUp"
+        />
+
+    <Button
+        android:id="@+id/microstep_down"
+        style="@style/arrowButtonStyle.down"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/microstep_right"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/microstep_left"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".60"
+        android:onClick="microstepDown"
+        />
+
+    <Button
+        android:id="@+id/microstep_right"
+        style="@style/arrowButtonStyle.up"
+        android:rotation="90"
+        app:layout_constraintBottom_toTopOf="@+id/microstep_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/microstep_up"
+        android:onClick="microstepRight"/>
+
+    <Button
+        android:id="@+id/microstep_left"
+        style="@style/arrowButtonStyle.down"
+        android:rotation="90"
+        app:layout_constraintBottom_toTopOf="@+id/microstep_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/microstep_up"
+        android:onClick="microstepLeft"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,15 +34,14 @@ public class SpirographActivity extends AppCompatActivity {
     private Ardutooth mArdutooth;
     private boolean readerThreadIsRunning;
 
-    SpirographDrawingService drawingService;
+    SpirographDrawingService mDrawingService;
     private boolean isSpirographServiceRunning;
-    private final String SERVICE_IS_RUNNING = "Service is Running";
 
-    @Override protected void onSaveInstanceState (@NonNull Bundle outState)
-    {
-        super.onSaveInstanceState (outState);
-        outState.putString (SERVICE_IS_RUNNING, String.valueOf(isSpirographServiceRunning));
-    }
+//    @Override
+//    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+//        super.onRestoreInstanceState(savedInstanceState);
+//
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,16 +52,13 @@ public class SpirographActivity extends AppCompatActivity {
 
         initializeFields();
 
-        restoreServiceStatus(savedInstanceState);
-
     }
 
     private void initializeFields() {
         mArdutooth = Ardutooth.getInstance(this);
-        mArdutooth.setConnection();
 
-        drawingService = new SpirographDrawingService();
-        drawingService.setArdutooth(mArdutooth);
+        mDrawingService = new SpirographDrawingService();
+        mDrawingService.setArdutooth(mArdutooth);
 
         random = new Random();
 
@@ -70,10 +66,12 @@ public class SpirographActivity extends AppCompatActivity {
         mLParamEditText = findViewById(R.id.l_param);
         mStartButton = findViewById(R.id.start_button);
         mStopButton = findViewById(R.id.stop_button);
+
+        getServiceStatus();
     }
 
-    private void restoreServiceStatus(Bundle savedInstanceState) {
-        isSpirographServiceRunning = savedInstanceState != null && savedInstanceState.getBoolean(SERVICE_IS_RUNNING);
+    private void getServiceStatus() {
+        isSpirographServiceRunning = !mDrawingService.isStopped();
 
         if (isSpirographServiceRunning){
             mStopButton.setEnabled(true);
@@ -95,7 +93,7 @@ public class SpirographActivity extends AppCompatActivity {
         mStartButton.setEnabled(true);
         mStopButton.setEnabled(false);
 
-        drawingService.setAngle(0);
+        mDrawingService.setAngle(0);
     }
 
     public void startSpirograph(View view) {
@@ -139,8 +137,8 @@ public class SpirographActivity extends AppCompatActivity {
 
         Log.i(TAG, "kParam = " + kParam + ", lParam = " + lParam);
 
-        drawingService.setKParam(kParam);
-        drawingService.setLParam(lParam);
+        mDrawingService.setKParam(kParam);
+        mDrawingService.setLParam(lParam);
     }
 
     private void setupFAB() {

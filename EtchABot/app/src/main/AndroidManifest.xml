@@ -14,13 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
+
+        <activity android:name=".MicrostepActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppThemeDialog"
+            />
+
         <service android:name=".SpirographDrawingService" />
+
         <activity
             android:name=".SpirographActivity"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            >
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
