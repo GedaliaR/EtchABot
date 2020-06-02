@@ -70,13 +70,11 @@ boolean vertDirChange(uint8_t dir) {
 }
 
 /*
-   Consider replacing the algorithmic drawline with a simpler drawline that takes an angle (x/y)
-   and power (speed) to create a vector ([x/y]*speed). May be easier to integrate w/app.
-   Keep this for testing with computer.
+   Moves to an absolute target x,y.
 
-   Draws a line from the current position to the end position.  If we are at the end position, does nothing.
-   TODO: Got the motors to spin simultaneously (yay!) now get them to spin so that they stop spinning at
-   the same time. Consider implementing the original algorithmic way, but with the AccelStepper.step() method.
+   This is the simplest way to do this. However, it does not draw straight lines - it just runs each motor until they've reached
+   their targets. It does the job for now though.
+   TODO: replace drawing algorithm with a more precise one.
 */
 void drawLine(int targetX, int targetY) {
 
