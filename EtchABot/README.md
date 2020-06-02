@@ -39,7 +39,7 @@ The TextViews show the angle and power of the current input via the Joystick.
 It has two layouts, one for portrait, one for landscape:
 </p>
 
-![](../images/Main_Activity_portrait.png) ![](../images/Main_Activity_land.png)
+![Main Activity - portrait](../images/Main_Activity_portrait.png) ![Main Activity - landscape](../images/Main_Activity_land.png)
 
 ## Spirograph Activity
 
@@ -57,10 +57,26 @@ part of Debra Ansell's project.
 Here's a screenshot of the activity:
 </p>
 
-![](../images/Spirograph.png)
+![Spirograph Activity](../images/Spirograph.png)
 
 <p>And here's a gif of the spirograph drawing:</p>
 
-![](../images/Spirograph.gif)
+![Spirograph Drawing GIF](../images/Spirograph.gif)
 
 ## Microstep Activity
+
+<p>
+The Microstep Activity is a dialog activity that appears over the Main Activity. It has four arrow buttons pointing up,
+down, left, and right, respectively. When pressed, each button will send a command to move the Etch-A-Sketch a small amount
+in that direction.
+</p>
+
+![Microstep Activity](../images/Microstep.png)
+
+## About Acivity
+
+<p>
+A simple dialog with a link to this GitHub project:
+</p>
+
+![About Activity](../images/About.png)

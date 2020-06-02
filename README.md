@@ -1,6 +1,6 @@
 # EtchABot
 
-![](images/Dilbert_Strip.gif)
+![Dilbert Strip](images/Dilbert_Strip.gif)
 
 <h5>Final Project for Android Class. Controls an Etch-A-Sketch from Android App</h5>
  <p>
