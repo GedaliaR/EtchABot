@@ -42,3 +42,25 @@ It has two layouts, one for portrait, one for landscape:
 ![](../images/Main_Activity_portrait.png) ![](../images/Main_Activity_land.png)
 
 ## Spirograph Activity
+
+<p>
+In the Spirograph Activity, a user can enter two numbers in the fields in the center of the page and press the Start button, and 
+the app will use those two parameters in an algorithm. This algorithm generates a set of coordinates and sends the coordinates,
+one-by-one to the Arduino, drawing a spirograph. The algorith and communication takes place in a background Service on a seperate
+thread, so the user can start the spirograph and switch to a different app on the Android. The Service will stay alive as long 
+as the app is, or until the user presses the Stop button. The user can also leave the two fields blank, and the app will randomly 
+generate two parameters.
+
+The algorithm was taken from <a href=""https://github.com/geekmomprojects/EtchABot/blob/master/examples/EtchABotPatterns/EtchABotPatterns.ino>this</a> 
+part of Debra Ansell's project.
+
+Here's a screenshot of the activity:
+</p>
+
+![](../images/Spirograph.png)
+
+<p>And here's a gif of the spirograph drawing:</p>
+
+![](../images/Spirograph.gif)
+
+## Microstep Activity
