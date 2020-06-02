@@ -51,7 +51,7 @@ thread, so the user can start the spirograph and switch to a different app on th
 as the app is, or until the user presses the Stop button. The user can also leave the two fields blank, and the app will randomly 
 generate two parameters.
 
-The algorithm was taken from <a href=""https://github.com/geekmomprojects/EtchABot/blob/master/examples/EtchABotPatterns/EtchABotPatterns.ino>this</a> 
+The algorithm was taken from <a href="https://github.com/geekmomprojects/EtchABot/blob/master/examples/EtchABotPatterns/EtchABotPatterns.ino">this</a> 
 part of Debra Ansell's project.
 
 Here's a screenshot of the activity:
