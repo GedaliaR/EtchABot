@@ -1,4 +1,4 @@
-#EtchABot App
+# EtchABot App
 
 <p>
 The purpose of this app is to function as a master to the Arduino slave. Therefore, it is entirely dependent on a Bluetooth 
@@ -17,16 +17,18 @@ As of this version, the app has four activities:
 
 </p>
 
-##Main Activity
+## Main Activity
 
 <p>
 The Main Activity is the first activity that is launched upon the app starting.
 
 It has several elements:
+<ul>
 <li>A Joystick in the center</li>
 <li>Two TextViews positioned over the Joystick</li>
 <li>A Menu bar that has the buttons to the other Activites</li>
- 
+</ul>
+
  The Joystick View in the center was created by Damien Brun - <a href="https://github.com/controlwear/virtual-joystick-android">Link to his project</a>. 
 The Joystick serves as the main control for the Etch-A-Sketch. If a user taps anywhere on the Joystick, or slides a finger
 across it, the event handler takes the angle, and the distance from the center and creates a vector that can be sent to 
@@ -39,4 +41,4 @@ It has two layouts, one for portrait, one for landscape:
 
 ![](../images/Main_Activity_portrait.png) ![](../images/Main_Activity_land.png)
 
-##Spirograph Activity
+## Spirograph Activity
