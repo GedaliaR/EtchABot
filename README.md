@@ -55,8 +55,8 @@
  <p>Finally, the Etch-A-Sketch and all of the electrical components are hot-glued to some pieces of cardbord that act as 
  a stand.</p>
  
- ##Arduino Code
- <p> 
+## Arduino Code
+<p> 
  The code for the Arduino is pretty simple (albeit a bit of spaghetti code). After initializing the motors and the Software
  Serial that represents the Bluetooth, it waits until a command string is recieved by the Bluetooth module. After reading a 
  semicolon (which marks the end of a command string) it interprets and executes the command. Upon the completion of execution 
@@ -66,14 +66,7 @@
  and tracks the position in steps of the motors.
  </p>
  
- ##Android app
+ ## Android app
  <p>
- There's much more going on in the Android app than the other parts of the project so here's a link to its own README
-
-[EtchABot/README.md]
- 
+ There's much more going on in the Android app than the other parts of the project so here's a link to its own <a href="EtchABot/README.md"> README</a>
  </p>
- 
- 
-
-
