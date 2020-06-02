@@ -26,6 +26,7 @@ It has several elements:
 <ul>
 <li>A Joystick in the center</li>
 <li>Two TextViews positioned over the Joystick</li>
+<li>FAB</li>
 <li>A Menu bar that has the buttons to the other Activites</li>
 </ul>
 
@@ -35,6 +36,9 @@ across it, the event handler takes the angle, and the distance from the center a
 the Arduino over Bluetooth.
 
 The TextViews show the angle and power of the current input via the Joystick.
+
+The FAB, when clicked, sends a command to move the Etch-A-Sketch to 0,0 (home), and it shows a Snackbar that has a message,
+"Auto Homing."
 
 It has two layouts, one for portrait, one for landscape:
 </p>
@@ -53,6 +57,8 @@ generate two parameters.
 
 The algorithm was taken from <a href="https://github.com/geekmomprojects/EtchABot/blob/master/examples/EtchABotPatterns/EtchABotPatterns.ino">this</a> 
 part of Debra Ansell's project.
+
+There is also a FAB which is identical to the FAB on the Main Activity.
 
 Here's a screenshot of the activity:
 </p>
