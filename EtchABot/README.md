@@ -2,9 +2,8 @@
 
 <p>
 The purpose of this app is to function as a master to the Arduino slave. Therefore, it is entirely dependent on a Bluetooth 
-connection. Instead of handling the Bluetooth connection in the app itself, I used a library called Ardutooth (to which I 
-actually made a code contribution) to handle all the bluetooth stuff (turning on Bluetooth, pairing, connecting, sockets, etc.)
-externally. Here's a link to that <a href="https://github.com/giuseppebrb/Ardutooth">project</a>.
+connection. Instead of handling the Bluetooth connection in the app itself, I used a library called Ardutooth to handle all the bluetooth stuff (turning on Bluetooth, pairing, connecting, sockets, etc.)
+externally. I contributed to this library the functionality to also read from the Arduino (which I found helpful during integration). Here's a link to that <a href="https://github.com/giuseppebrb/Ardutooth">project</a>.
 
 As of this version, the app has four activities:
 
