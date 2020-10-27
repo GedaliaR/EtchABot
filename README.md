@@ -4,7 +4,7 @@
 
 <h5>Final Project for Android Class. Controls an Etch-A-Sketch from Android App</h5>
  <p>
-  The main idea of this project was to control an Etch-A-Sketch from an Android device by sending instructions over Bluetooth to an Arduino Uno, which controls two stpper motors attached to the Etch-A-Sketch. <br>
+  The main idea of this project was to control an Etch-A-Sketch from an Android device by sending instructions over Bluetooth to an Arduino Uno, which controls two stepper motors attached to the Etch-A-Sketch. <br>
   
   
   There are three parts to this project:
